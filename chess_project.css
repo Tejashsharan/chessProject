@@ -1,0 +1,19 @@
+main{
+    height: 251px;
+    width: 268px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+div{
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+}
+.white{
+    background-color: white;
+}
+.boxes{
+    background-color: black;
+}
