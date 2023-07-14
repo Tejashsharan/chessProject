@@ -1,4 +1,4 @@
-main{
+body{
     height: 251px;
     width: 268px;
     border: 2px solid black;
@@ -12,8 +12,8 @@ div{
     border: 1px solid black;
 }
 .white{
-    background-color: white;
+    background-color: grey;
 }
 .boxes{
-    background-color: black;
+    background-color: brown;
 }
