@@ -6,10 +6,11 @@ for (let i = 0; i < 64; i++) {
     body.appendChild(div[i])
     img[i] = document.createElement("img")
     div[i].appendChild(img[i])
+    div[i].classList.add("chessBox")
     if (parseInt((i / 8) + i) % 2 == 0)
         div[i].classList.add("white")
     else
-        div[i].classList.add("boxes")
+        div[i].classList.add("black")
 }
 
 for(let i=0;i<16;i++){
@@ -89,6 +90,53 @@ for(let i=48;i<64;i++){
         img[i].style.width="28px"
     }
 
+}
+
+let target;
+let source;
+
+for(let i=0;i<=63;i++){
+
+    img[i].addEventListener("dragstart",()=>{
+        console.log("dragstart have been triggered")
+    })
+    img[i].addEventListener("dragend",(e)=>{
+        console.log("dragend have triggered")
+        console.log(e.target)
+        // console.log(i)
+        target=e.target.src
+        // console.log(target)
+        // console.log(source)
+        source.src=target
+        source.style.height="28px"
+        source.style.width="28px"
+        e.target.classList.add("hidden")
+        // console.log(e.target)
+
+
+    })
+
+}
+
+
+for(chessBox of div){
+    chessBox.addEventListener("dragover",(e)=>{
+        e.preventDefault()
+        console.log("dragover have been triggered")
+    })
+    chessBox.addEventListener('dragleave',()=>{
+        console.log("dragleave have been triggerd")
+    })
+    chessBox.addEventListener('dragenter',()=>{
+        console.log("dragenter have been triggerd")
+    })
+    chessBox.addEventListener('drop',(e)=>{
+        console.log("drop have been triggered")
+        console.log(e.target.firstChild)
+        e.target.firstChild.classList.remove("hidden")
+        source=e.target.firstChild
+        
+    })
 }
 
 

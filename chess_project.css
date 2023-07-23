@@ -14,6 +14,9 @@ div{
 .white{
     background-color: grey;
 }
-.boxes{
+.black{
     background-color: brown;
+}
+.hidden{
+    display: none;
 }
