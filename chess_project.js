@@ -135,7 +135,6 @@ for(chessBox of div){
         console.log(e.target.firstChild)
         e.target.firstChild.classList.remove("hidden")
         source=e.target.firstChild
-        
     })
 }
 
