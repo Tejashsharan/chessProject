@@ -140,3 +140,87 @@ for(chessBox of div){
 }
 
 
+// const gameboard=document.querySelector("#gameboard")
+// let playerDisplay=document.querySelector("#players")
+// const infoDisplay=document.querySelector("#info-display")
+// const width=8
+// let playerGo='black'
+// playerDisplay.textContent='black'
+
+// const startPeices=[
+//     rook,knight,bishop,queen,king,bishop,knight,rook,
+//     pawn,pawn,pawn,pawn,pawn,pawn,pawn,pawn,
+//     '','','','','','','','',
+//     '','','','','','','','',
+//     '','','','','','','','',
+//     '','','','','','','','',
+//     pawn,pawn,pawn,pawn,pawn,pawn,pawn,pawn,
+//     rook,knight,bishop,queen,king,bishop,knight,rook
+// ]
+// function createBoard(){
+//     startPeices.forEach((startPeice,i)=>{
+//         let square=document.createElement("div")
+//         square.classList.add("square")
+//         square.innerHTML=startPeice
+//         square.setAttribute('id',i)
+//         const row=Math.floor((63-i)/8)+1
+//         if(row%2===0){
+//             square.classList.add(i%2===0?"beige":"brown")
+//         }else{
+//             square.classList.add(i%2===0?"brown":"beige")
+//         }
+//         // console.log(square)
+//         square.firstChild?.setAttribute("draggable",true)
+//         if(i<=15){
+//             square.firstChild.classList.add("black")
+//         }
+//         if(i>=48){
+//             square.firstChild.classList.add('white')
+//         }
+//         gameboard.append(square)
+//     })
+// }
+// createBoard()
+// const allSquare=document.querySelectorAll(".square")
+// allSquare.forEach((square)=>{
+//     square.addEventListener("dragstart",dragStart)
+//     square.addEventListener("dragover",dragOver)
+//     square.addEventListener("drop",dragDrop)
+// })
+
+// let startPosition
+// let draggedElement
+
+// function dragStart(e){
+//     // console.log(e.target.parentNode)//the element that we will start dragging
+//     startPosition=e.target.parentNode.id
+//     draggedElement=e.target
+// }
+// function dragOver(e){
+//     e.preventDefault()//just used for preventing the default actions
+// }
+// function dragDrop(e){
+//     e.stopPropagation()
+//     const taken=e.target.classList.contains('peice')
+//     changePlayer()
+//     // e.target.append(draggedElement)
+// }
+// function changePlayer(){
+//     if(playerGo==="black"){
+//         playerGo="white"
+//         playerDisplay.textContent="white"
+//     }else{
+//         playerGo="black"
+//         playerDisplay.textContent="black"
+//     }
+// }
+
+// function reverseIds(){
+//     const allSquares=document.querySelectorAll(".square")
+//     allSquares.forEach((square,i)=>square.setAttribute("square-id",(width*width-1)-i))
+// }
+
+// function revertIds(){
+//     const allSquares=document.querySelectorAll(".square")
+//     allSquares.forEach((square,i)=>square.setAttribute("square-id",i))
+// }
