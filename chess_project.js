@@ -98,10 +98,10 @@ let source;
 for(let i=0;i<=63;i++){
 
     img[i].addEventListener("dragstart",()=>{
-        console.log("dragstart have been triggered")
+        // console.log("dragstart have been triggered")
     })
     img[i].addEventListener("dragend",(e)=>{
-        console.log("dragend have triggered")
+        // console.log("dragend have triggered")
         console.log(e.target)
         // console.log(i)
         target=e.target.src
@@ -122,19 +122,20 @@ for(let i=0;i<=63;i++){
 for(chessBox of div){
     chessBox.addEventListener("dragover",(e)=>{
         e.preventDefault()
-        console.log("dragover have been triggered")
+        // console.log("dragover have been triggered")
     })
     chessBox.addEventListener('dragleave',()=>{
-        console.log("dragleave have been triggerd")
+        // console.log("dragleave have been triggerd")
     })
     chessBox.addEventListener('dragenter',()=>{
         console.log("dragenter have been triggerd")
     })
     chessBox.addEventListener('drop',(e)=>{
-        console.log("drop have been triggered")
+        // console.log("drop have been triggered")
         console.log(e.target.firstChild)
         e.target.firstChild.classList.remove("hidden")
         source=e.target.firstChild
+        
     })
 }
 
