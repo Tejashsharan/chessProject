@@ -1,4 +1,4 @@
-body{
+/* body{
     height: 251px;
     width: 268px;
     border: 2px solid black;
@@ -19,8 +19,10 @@ div{
 }
 .hidden{
     display: none;
-}
+} */
 
+
+/* part2 */
 /* #gameboard{
     width: 320px;
     height: 320px;
@@ -58,3 +60,27 @@ path{
 .brown{
     background-color: brown;
 } */
+
+/* part3 */
+body{
+    border: 2px solid black;
+    height: 272px;
+    width: 272px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.squares{
+    border: 2px solid black;
+    height: 30px;
+    width: 30px;
+}
+.black{
+    background-color:black;
+}
+.white{
+    background-color: white;
+}
+.peice{
+    height: 30px;
+    width: 30px;
+}
