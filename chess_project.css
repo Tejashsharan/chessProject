@@ -75,12 +75,21 @@ body{
     width: 30px;
 }
 .black{
-    background-color:black;
+    background-color:rgb(138, 237, 98);
 }
 .white{
-    background-color: white;
+    background-color: rgb(223, 239, 174);
 }
 .peice{
     height: 30px;
     width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.blackSide svg{
+    fill: rgb(8, 1, 27);
+}
+.whiteSide svg{
+    fill: rgb(179, 1, 244);
 }

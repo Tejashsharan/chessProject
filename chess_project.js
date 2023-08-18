@@ -240,11 +240,28 @@ let body=document.querySelector("body")
 for(let i=0;i<64;i++){
     div[i]=document.createElement("div")
     div[i].classList.add("squares")
+    div[i].classList.add(i)
     body.appendChild(div[i])
     if (parseInt((i / 8) + i) % 2 == 0)
         div[i].classList.add("black")
     else
         div[i].classList.add("white")
+    if(i>=8&&i<16||i>=48&&i<56)
+    div[i].innerHTML=pawn;
+    if(i==0||i==7||i==63||i==56)
+    div[i].innerHTML=rook;
+    if(i==1||i==6||i==62||i==57)
+    div[i].innerHTML=knight
+    if(i==2||i==5||i==61||i==58)
+    div[i].innerHTML=bishop
+    if(i==3||i==59)
+    div[i].innerHTML=queen
+    if(i==4||i==60)
+    div[i].innerHTML=king
+    if(i<16)
+    div[i].lastChild.classList.add("blackSide");
+    if(i>=48)
+    div[i].lastChild.classList.add("whiteSide");
 }
 
 
