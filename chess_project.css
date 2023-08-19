@@ -80,13 +80,32 @@ body{
 .white{
     background-color: rgb(223, 239, 174);
 }
+
+/* took from youtube need to understand start... */
+
 .peice{
-    height: 30px;
-    width: 30px;
+    height: 26px;
+    width: 26px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 9;
 }
+.squares svg{
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    position: relative;
+    z-index: -9;
+}
+path{
+    position: relative;
+    z-index: -10;
+}
+
+/* end... */
+
 .blackSide svg{
     fill: rgb(8, 1, 27);
 }

@@ -263,5 +263,27 @@ for(let i=0;i<64;i++){
     if(i>=48)
     div[i].lastChild.classList.add("whiteSide");
 }
+const peice =document.querySelectorAll(".peice");
+const squares=document.querySelectorAll(".squares")
+peice.forEach(el=>el.setAttribute("draggable","true"))
 
-
+let element;
+squares.forEach(el=>{
+    el.addEventListener("dragstart",(e)=>{
+        element=e.target;
+    })
+    el.addEventListener("dragover",(e)=>{
+        e.preventDefault()
+    })
+    el.addEventListener("drop",(e)=>{
+        e.stopPropagation()
+        console.log(e.target)
+        if(e.target.hasChildNodes()){
+            e.target.removeChild(e.target)
+            e.target.appendChild(element)
+            element.style.zindex=+1
+        }
+        else
+        e.target.appendChild(element)
+    })
+})
