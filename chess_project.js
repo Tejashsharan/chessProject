@@ -279,9 +279,9 @@ squares.forEach(el=>{
         e.stopPropagation()
         console.log(e.target)
         if(e.target.hasChildNodes()){
-            e.target.removeChild(e.target)
+            e.target.lastChild.remove()
             e.target.appendChild(element)
-            element.style.zindex=+1
+            // console.log(e.target.innerHTML)
         }
         else
         e.target.appendChild(element)
