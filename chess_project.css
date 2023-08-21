@@ -62,7 +62,8 @@ path{
 } */
 
 /* part3 */
-body{
+
+section.chessBoard{
     border: 2px solid black;
     height: 272px;
     width: 272px;
@@ -84,8 +85,8 @@ body{
 /* took from youtube need to understand start... */
 
 .peice{
-    height: 26px;
-    width: 26px;
+    height: 30px;
+    width: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,7 +95,7 @@ body{
 }
 .squares svg{
     height: 30px;
-    width: 30px;
+    width: 10px;
     margin: 5px;
     position: relative;
     z-index: -9;
@@ -111,4 +112,17 @@ path{
 }
 .whiteSide svg{
     fill: rgb(179, 1, 244);
+}
+.outerBox{
+    margin-top: 10px;
+    height: 139px;
+    width: 272px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap:wrap;
+}
+.outerSquare{
+    height: 30px;
+    width: 30px;
+    border: 2px solid black;
 }
