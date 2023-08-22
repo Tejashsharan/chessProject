@@ -269,6 +269,7 @@ peice.forEach(el=>el.setAttribute("draggable","true"))
 
 let element;
 let newElement;
+let count=0;
 squares.forEach(el=>{
     el.addEventListener("dragstart",(e)=>{
         element=e.target;
@@ -278,29 +279,17 @@ squares.forEach(el=>{
     })
     el.addEventListener("drop",(e)=>{
         e.stopPropagation()
-        // console.log(e.target)
-        // if(e.target.parentNode.hasChildNodes()){
-        //     console.log(e.target)
-        // }
-        // else
         let previous=e.target.parentNode
         if(e.target.hasChildNodes()){
         newElement=e.target
-        console.log(newElement)
-        newdiv[0].appendChild(newElement)
-        console.log(previous)
+        newdiv[count].appendChild(newElement)
         previous.appendChild(element)
-        console.log(e.target.parentNode)
-    }
+        count++
+        }
         else{
         console.log(e.target)
         e.target.appendChild(element)
         }
-        // e.target.parentNode.appendChild(element)
-        // console.log(e.target)
-        // console.log(e.target)
-        // console.log(e.target.parentNode.hasChildNodes())
-        // e.target.parentNode.appendChild(element)
     })
 })
 const newdiv=[]
@@ -311,4 +300,3 @@ for(let i=0;i<31;i++){
     newdiv[i].classList.add(i)
     outerBox.appendChild(newdiv[i])
 }
-// console.log(newdiv[1])
