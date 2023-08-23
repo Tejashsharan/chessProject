@@ -270,15 +270,33 @@ peice.forEach(el=>el.setAttribute("draggable","true"))
 let element;
 let newElement;
 let count=0;
+let span=document.querySelector("p")
+let playerGo="black"
+span.textContent="black s move"
 squares.forEach(el=>{
     el.addEventListener("dragstart",(e)=>{
         element=e.target;
+        console.log(element)
     })
     el.addEventListener("dragover",(e)=>{
         e.preventDefault()
     })
     el.addEventListener("drop",(e)=>{
         e.stopPropagation()
+    //     if(element.getElementsByClassName("whiteSide"))
+    //     span.innerText="blacks move"
+    //     else if (element.getElementsByClassName("blackSide"))
+    //     span.innerText="whites move"
+    // console.log(element)
+        if(playerGo==="black"){
+            playerGo="white"
+            span.textContent="white s move"
+        }
+        else{
+            playerGo="black"
+            span.textContent="black s move"
+        }
+        
         let previous=e.target.parentNode
         if(e.target.hasChildNodes()){
         newElement=e.target
@@ -287,7 +305,7 @@ squares.forEach(el=>{
         count++
         }
         else{
-        console.log(e.target)
+        // console.log(e.target)
         e.target.appendChild(element)
         }
     })
