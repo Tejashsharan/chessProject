@@ -240,7 +240,7 @@ let body=document.querySelector("section")
 for(let i=0;i<64;i++){
     div[i]=document.createElement("div")
     div[i].classList.add("squares")
-    div[i].classList.add(i)
+    div[i].id=i
     body.appendChild(div[i])
     if (parseInt((i / 8) + i) % 2 == 0)
         div[i].classList.add("black")
@@ -272,16 +272,31 @@ let newElement;
 let count=0;
 let span=document.querySelector("p")
 span.textContent="Black's move"
+
 squares.forEach(el=>{
     el.addEventListener("dragstart",(e)=>{
         element=e.target;
-        console.log(element)
     })
     el.addEventListener("dragover",(e)=>{
         e.preventDefault()
     })
     el.addEventListener("drop",(e)=>{
+
+
+
+
+
+
+        // console.log(e.target)
+
+
+        // const drop=e.target
         e.stopPropagation()
+        // console.log(valid(element.parentNode,drop))
+        valid(element.parentNode,e.target)
+
+
+
         if(span.textContent==="Black's move")
         span.textContent="White's move"
         else
@@ -296,8 +311,20 @@ squares.forEach(el=>{
         else{
         e.target.appendChild(element)
         }
+        squares.forEach(el=>{
+            el.id=63-Number(el.id)
+        })
     })
 })
+function valid(n,m){
+    const idOfstart=n.getAttribute("id")
+    console.log(idOfstart)
+    const idOfEnd=m.getAttribute("id")
+    console.log(idOfEnd)
+    const ele=element.id
+    console.log(ele)
+
+}
 const newdiv=[]
 const outerBox=document.querySelector(".outerBox")
 for(let i=0;i<31;i++){
