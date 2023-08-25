@@ -268,6 +268,7 @@ const squares=document.querySelectorAll(".squares")
 peice.forEach(el=>el.setAttribute("draggable","true"))
 
 let element;
+let droped;
 let newElement;
 let count=0;
 let span=document.querySelector("p")
@@ -284,16 +285,16 @@ squares.forEach(el=>{
 
 
 
-
-
-
+        
+        
         // console.log(e.target)
-
-
+        
+        
         // const drop=e.target
         e.stopPropagation()
+        droped=e.target
         // console.log(valid(element.parentNode,drop))
-        valid(element.parentNode,e.target)
+        // valid()
 
 
 
@@ -302,28 +303,45 @@ squares.forEach(el=>{
         else
         span.textContent="Black's move"
         let previous=e.target.parentNode
-        if(e.target.hasChildNodes()){
-        newElement=e.target
-        newdiv[count].appendChild(newElement)
-        previous.appendChild(element)
-        count++
+
+
+        if(e.target.hasChildNodes() ){
+            if(valid()){
+                newElement=e.target
+                newdiv[count].appendChild(newElement)
+                previous.appendChild(element)
+                count++
+            }
+            // else
+            // alert("not a valid move")
         }
         else{
-        e.target.appendChild(element)
+            if(valid())
+                e.target.appendChild(element)
+            else
+                alert("not a valid move")
         }
         squares.forEach(el=>{
             el.id=63-Number(el.id)
         })
     })
 })
-function valid(n,m){
-    const idOfstart=n.getAttribute("id")
-    console.log(idOfstart)
-    const idOfEnd=m.getAttribute("id")
-    console.log(idOfEnd)
+function valid(){
+    const idOfstart=Number(element.parentNode.id)
+    // console.log(idOfstart)
+    const idOfEnd=Number(droped.id)
+    console.log(droped)
+    console.log(droped.classList.contains("peice"))
+    // console.log(idOfEnd)
     const ele=element.id
-    console.log(ele)
-
+    // console.log(ele)
+    switch(ele){
+        case "pawn":
+            let start=[8,9,10,11,12,13,14,15]
+            if(start.includes(idOfstart)&&idOfstart+16===idOfEnd||start.includes(idOfstart)&&idOfstart+8===idOfEnd||idOfstart+7===idOfEnd && droped.id==="pawn"||idOfstart+9===idOfEnd && droped.id==="pawn"){
+                return true
+            }
+    }
 }
 const newdiv=[]
 const outerBox=document.querySelector(".outerBox")
