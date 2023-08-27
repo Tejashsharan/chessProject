@@ -304,7 +304,7 @@ squares.forEach(el=>{
         span.textContent="Black's move"
         let previous=e.target.parentNode
 
-
+        // console.log(valid())
         if(e.target.hasChildNodes() ){
             if(valid()){
                 newElement=e.target
@@ -312,8 +312,8 @@ squares.forEach(el=>{
                 previous.appendChild(element)
                 count++
             }
-            // else
-            // alert("not a valid move")
+            else
+            alert("not a validate move")
         }
         else{
             if(valid())
@@ -328,19 +328,23 @@ squares.forEach(el=>{
 })
 function valid(){
     const idOfstart=Number(element.parentNode.id)
-    // console.log(idOfstart)
-    const idOfEnd=Number(droped.id)
-    console.log(droped)
-    console.log(droped.classList.contains("peice"))
-    // console.log(idOfEnd)
+    console.log("idOfstart",idOfstart)
+    let idOfEnd
+    if(!Number(droped.id))
+        idOfEnd=Number(droped.parentNode.id)
+    else
+        idOfEnd=Number(droped.id)
+    console.log("idOfend",idOfEnd)
     const ele=element.id
-    // console.log(ele)
+    console.log(droped.classList.contains("peice"))
     switch(ele){
         case "pawn":
             let start=[8,9,10,11,12,13,14,15]
-            if(start.includes(idOfstart)&&idOfstart+16===idOfEnd||start.includes(idOfstart)&&idOfstart+8===idOfEnd||idOfstart+7===idOfEnd && droped.id==="pawn"||idOfstart+9===idOfEnd && droped.id==="pawn"){
+            if(start.includes(idOfstart)&&idOfstart+16===idOfEnd||start.includes(idOfstart)&&idOfstart+8===idOfEnd||idOfstart+7===idOfEnd && droped.classList.contains("peice")||idOfstart+9===idOfEnd && droped.classList.contains("peice")){
                 return true
             }
+            else
+            return false
     }
 }
 const newdiv=[]
