@@ -428,7 +428,83 @@ function valid(){
                 return true
             }
         break;
+        case "queen":
+            if(
+                
+                idOfstart+8+1===idOfEnd||
+                idOfstart+8*2+2===idOfEnd && !document.getElementById(idOfstart+8+1).hasChildNodes()||
+                idOfstart+8*3+3===idOfEnd && !document.getElementById(idOfstart+8+1).hasChildNodes() && !document.getElementById(idOfstart+8*2+2).hasChildNodes()||
+                idOfstart+8*4+4===idOfEnd && !document.getElementById(idOfstart+8+1).hasChildNodes() && !document.getElementById(idOfstart+8*2+2).hasChildNodes() && !document.getElementById(idOfstart+8*3+3).hasChildNodes()||
+                idOfstart+8*5+5===idOfEnd && !document.getElementById(idOfstart+8+1).hasChildNodes() && !document.getElementById(idOfstart+8*2+2).hasChildNodes() && !document.getElementById(idOfstart+8*3+3).hasChildNodes() && !document.getElementById(idOfstart+8*4+4).hasChildNodes()||
+                idOfstart+8*6+6===idOfEnd && !document.getElementById(idOfstart+8+1).hasChildNodes() && !document.getElementById(idOfstart+8*2+2).hasChildNodes() && !document.getElementById(idOfstart+8*3+3).hasChildNodes() && !document.getElementById(idOfstart+8*4+4).hasChildNodes() && !document.getElementById(idOfstart+8*5+5).hasChildNodes()||
+                idOfstart+8*7+7===idOfEnd && !document.getElementById(idOfstart+8+1).hasChildNodes() && !document.getElementById(idOfstart+8*2+2).hasChildNodes() && !document.getElementById(idOfstart+8*3+3).hasChildNodes() && !document.getElementById(idOfstart+8*4+4).hasChildNodes() && !document.getElementById(idOfstart+8*5+5).hasChildNodes() && !document.getElementById(idOfstart+8*6+6).hasChildNodes()||
+                //...
+                idOfstart-8-1===idOfEnd||
+                idOfstart-8*2-2===idOfEnd && !document.getElementById(idOfstart-8-1).hasChildNodes()||
+                idOfstart-8*3-3===idOfEnd && !document.getElementById(idOfstart-8-1).hasChildNodes() && !document.getElementById(idOfstart-8*2-2).hasChildNodes()||
+                idOfstart-8*4-4===idOfEnd && !document.getElementById(idOfstart-8-1).hasChildNodes() && !document.getElementById(idOfstart-8*2-2).hasChildNodes() && !document.getElementById(idOfstart-8*3-3).hasChildNodes()||
+                idOfstart-8*5-5===idOfEnd && !document.getElementById(idOfstart-8-1).hasChildNodes() && !document.getElementById(idOfstart-8*2-2).hasChildNodes() && !document.getElementById(idOfstart-8*3-3).hasChildNodes() && !document.getElementById(idOfstart-8*4-4).hasChildNodes()||
+                idOfstart-8*6-6===idOfEnd && !document.getElementById(idOfstart-8-1).hasChildNodes() && !document.getElementById(idOfstart-8*2-2).hasChildNodes() && !document.getElementById(idOfstart-8*3-3).hasChildNodes() && !document.getElementById(idOfstart-8*4-4).hasChildNodes() && !document.getElementById(idOfstart-8*5-5).hasChildNodes()||
+                idOfstart-8*7-7===idOfEnd && !document.getElementById(idOfstart-8-1).hasChildNodes() && !document.getElementById(idOfstart-8*2-2).hasChildNodes() && !document.getElementById(idOfstart-8*3-3).hasChildNodes() && !document.getElementById(idOfstart-8*4-4).hasChildNodes() && !document.getElementById(idOfstart-8*5-5).hasChildNodes() && !document.getElementById(idOfstart-8*6-6).hasChildNodes()||
+                //...
+                idOfstart+8-1===idOfEnd||
+                idOfstart+8*2-2===idOfEnd && !document.getElementById(idOfstart+8-1).hasChildNodes()||
+                idOfstart+8*3-3===idOfEnd && !document.getElementById(idOfstart+8-1).hasChildNodes() && !document.getElementById(idOfstart+8*2-2).hasChildNodes()||
+                idOfstart+8*4-4===idOfEnd && !document.getElementById(idOfstart+8-1).hasChildNodes() && !document.getElementById(idOfstart+8*2-2).hasChildNodes() && !document.getElementById(idOfstart+8*3-3).hasChildNodes()||
+                idOfstart+8*5-5===idOfEnd && !document.getElementById(idOfstart+8-1).hasChildNodes() && !document.getElementById(idOfstart+8*2-2).hasChildNodes() && !document.getElementById(idOfstart+8*3-3).hasChildNodes() && !document.getElementById(idOfstart+8*4-4).hasChildNodes()||
+                idOfstart+8*6-6===idOfEnd && !document.getElementById(idOfstart+8-1).hasChildNodes() && !document.getElementById(idOfstart+8*2-2).hasChildNodes() && !document.getElementById(idOfstart+8*3-3).hasChildNodes() && !document.getElementById(idOfstart+8*4-4).hasChildNodes() && !document.getElementById(idOfstart+8*5-5).hasChildNodes()||
+                idOfstart+8*7-7===idOfEnd && !document.getElementById(idOfstart+8-1).hasChildNodes() && !document.getElementById(idOfstart+8*2-2).hasChildNodes() && !document.getElementById(idOfstart+8*3-3).hasChildNodes() && !document.getElementById(idOfstart+8*4-4).hasChildNodes() && !document.getElementById(idOfstart+8*5-5).hasChildNodes() && !document.getElementById(idOfstart+8*6-6).hasChildNodes()||
+                //...
+                idOfstart-8+1===idOfEnd||
+                idOfstart-8*2+2===idOfEnd && !document.getElementById(idOfstart-8+1).hasChildNodes()||
+                idOfstart-8*3+3===idOfEnd && !document.getElementById(idOfstart-8+1).hasChildNodes() && !document.getElementById(idOfstart-8*2+2).hasChildNodes()||
+                idOfstart-8*4+4===idOfEnd && !document.getElementById(idOfstart-8+1).hasChildNodes() && !document.getElementById(idOfstart-8*2+2).hasChildNodes() && !document.getElementById(idOfstart-8*3+3).hasChildNodes()||
+                idOfstart-8*5+5===idOfEnd && !document.getElementById(idOfstart-8+1).hasChildNodes() && !document.getElementById(idOfstart-8*2+2).hasChildNodes() && !document.getElementById(idOfstart-8*3+3).hasChildNodes() && !document.getElementById(idOfstart-8*4+4).hasChildNodes()||
+                idOfstart-8*6+6===idOfEnd && !document.getElementById(idOfstart-8+1).hasChildNodes() && !document.getElementById(idOfstart-8*2+2).hasChildNodes() && !document.getElementById(idOfstart-8*3+3).hasChildNodes() && !document.getElementById(idOfstart-8*4+4).hasChildNodes() && !document.getElementById(idOfstart-8*5+5).hasChildNodes()||
+                idOfstart-8*7+7===idOfEnd && !document.getElementById(idOfstart-8+1).hasChildNodes() && !document.getElementById(idOfstart-8*2+2).hasChildNodes() && !document.getElementById(idOfstart-8*3+3).hasChildNodes() && !document.getElementById(idOfstart-8*4+4).hasChildNodes() && !document.getElementById(idOfstart-8*5+5).hasChildNodes() && !document.getElementById(idOfstart-8*6+6).hasChildNodes()||
 
+                //...
+                
+                idOfstart+8===idOfEnd||
+                idOfstart+8*2===idOfEnd && !document.getElementById(idOfstart+8).hasChildNodes()||
+                idOfstart+8*3===idOfEnd && !document.getElementById(idOfstart+8).hasChildNodes() && !document.getElementById(idOfstart+8*2).hasChildNodes()||
+                idOfstart+8*4===idOfEnd && !document.getElementById(idOfstart+8).hasChildNodes() && !document.getElementById(idOfstart+8*2).hasChildNodes() && !document.getElementById(idOfstart+8*3).hasChildNodes()||
+                idOfstart+8*5===idOfEnd && !document.getElementById(idOfstart+8).hasChildNodes() && !document.getElementById(idOfstart+8*2).hasChildNodes() && !document.getElementById(idOfstart+8*3).hasChildNodes() && !document.getElementById(idOfstart+8*4).hasChildNodes()||
+                idOfstart+8*6===idOfEnd && !document.getElementById(idOfstart+8).hasChildNodes() && !document.getElementById(idOfstart+8*2).hasChildNodes() && !document.getElementById(idOfstart+8*3).hasChildNodes() && !document.getElementById(idOfstart+8*4).hasChildNodes() && !document.getElementById(idOfstart+8*5).hasChildNodes()||
+                idOfstart+8*7===idOfEnd && !document.getElementById(idOfstart+8).hasChildNodes() && !document.getElementById(idOfstart+8*2).hasChildNodes() && !document.getElementById(idOfstart+8*3).hasChildNodes() && !document.getElementById(idOfstart+8*4).hasChildNodes() && !document.getElementById(idOfstart+8*5).hasChildNodes() && !document.getElementById(idOfstart+8*6).hasChildNodes()||
+                //...
+                idOfstart-8===idOfEnd||
+                idOfstart-8*2===idOfEnd && !document.getElementById(idOfstart-8).hasChildNodes()||
+                idOfstart-8*3===idOfEnd && !document.getElementById(idOfstart-8).hasChildNodes() && !document.getElementById(idOfstart-8*2).hasChildNodes()||
+                idOfstart-8*4===idOfEnd && !document.getElementById(idOfstart-8).hasChildNodes() && !document.getElementById(idOfstart-8*2).hasChildNodes() && !document.getElementById(idOfstart-8*3).hasChildNodes()||
+                idOfstart-8*5===idOfEnd && !document.getElementById(idOfstart-8).hasChildNodes() && !document.getElementById(idOfstart-8*2).hasChildNodes() && !document.getElementById(idOfstart-8*3).hasChildNodes() && !document.getElementById(idOfstart-8*4).hasChildNodes()||
+                idOfstart-8*6===idOfEnd && !document.getElementById(idOfstart-8).hasChildNodes() && !document.getElementById(idOfstart-8*2).hasChildNodes() && !document.getElementById(idOfstart-8*3).hasChildNodes() && !document.getElementById(idOfstart-8*4).hasChildNodes() && !document.getElementById(idOfstart-8*5).hasChildNodes()||
+                idOfstart-8*7===idOfEnd && !document.getElementById(idOfstart-8).hasChildNodes() && !document.getElementById(idOfstart-8*2).hasChildNodes() && !document.getElementById(idOfstart-8*3).hasChildNodes() && !document.getElementById(idOfstart-8*4).hasChildNodes() && !document.getElementById(idOfstart-8*5).hasChildNodes() && !document.getElementById(idOfstart-8*6).hasChildNodes()||
+                //...
+                idOfstart+1===idOfEnd||
+                idOfstart+2===idOfEnd && !document.getElementById(idOfstart+1).hasChildNodes()||
+                idOfstart+3===idOfEnd && !document.getElementById(idOfstart+1).hasChildNodes() && !document.getElementById(idOfstart+2).hasChildNodes()||
+                idOfstart+4===idOfEnd && !document.getElementById(idOfstart+1).hasChildNodes() && !document.getElementById(idOfstart+2).hasChildNodes() && !document.getElementById(idOfstart+3).hasChildNodes()||
+                idOfstart+5===idOfEnd && !document.getElementById(idOfstart+1).hasChildNodes() && !document.getElementById(idOfstart+2).hasChildNodes() && !document.getElementById(idOfstart+3).hasChildNodes() && !document.getElementById(idOfstart+4).hasChildNodes()||
+                idOfstart+6===idOfEnd && !document.getElementById(idOfstart+1).hasChildNodes() && !document.getElementById(idOfstart+2).hasChildNodes() && !document.getElementById(idOfstart+3).hasChildNodes() && !document.getElementById(idOfstart+4).hasChildNodes() && !document.getElementById(idOfstart+5).hasChildNodes()||
+                idOfstart+7===idOfEnd && !document.getElementById(idOfstart+1).hasChildNodes() && !document.getElementById(idOfstart+2).hasChildNodes() && !document.getElementById(idOfstart+3).hasChildNodes() && !document.getElementById(idOfstart+4).hasChildNodes() && !document.getElementById(idOfstart+5).hasChildNodes() && !document.getElementById(idOfstart+6).hasChildNodes()||
+                //...
+                idOfstart-1===idOfEnd||
+                idOfstart-2===idOfEnd && !document.getElementById(idOfstart-1).hasChildNodes()||
+                idOfstart-3===idOfEnd && !document.getElementById(idOfstart-1).hasChildNodes() && !document.getElementById(idOfstart-2).hasChildNodes()||
+                idOfstart-4===idOfEnd && !document.getElementById(idOfstart-1).hasChildNodes() && !document.getElementById(idOfstart-2).hasChildNodes() && !document.getElementById(idOfstart-3).hasChildNodes()||
+                idOfstart-5===idOfEnd && !document.getElementById(idOfstart-1).hasChildNodes() && !document.getElementById(idOfstart-2).hasChildNodes() && !document.getElementById(idOfstart-3).hasChildNodes() && !document.getElementById(idOfstart-4).hasChildNodes()||
+                idOfstart-6===idOfEnd && !document.getElementById(idOfstart-1).hasChildNodes() && !document.getElementById(idOfstart-2).hasChildNodes() && !document.getElementById(idOfstart-3).hasChildNodes() && !document.getElementById(idOfstart-4).hasChildNodes() && !document.getElementById(idOfstart-5).hasChildNodes()||
+                idOfstart-7===idOfEnd && !document.getElementById(idOfstart-1).hasChildNodes() && !document.getElementById(idOfstart-2).hasChildNodes() && !document.getElementById(idOfstart-3).hasChildNodes() && !document.getElementById(idOfstart-4).hasChildNodes() && !document.getElementById(idOfstart-5).hasChildNodes() && !document.getElementById(idOfstart-6).hasChildNodes()
+
+            ){
+                return true
+            }
+            break
+        // case "king":
+        //     if(
+
+        //     )
     }
 }
 const newdiv=[]
