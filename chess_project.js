@@ -501,10 +501,6 @@ function valid(){
                 return true
             }
             break
-        // case "king":
-        //     if(
-
-        //     )
     }
 }
 const newdiv=[]
