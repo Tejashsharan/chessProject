@@ -286,10 +286,16 @@ squares.forEach(el => {
         e.stopPropagation()
         droped = e.target
 
+        //added valid over here
+
+        if(valid()){
         if (span.textContent === "Black's move")
             span.textContent = "White's move"
         else
             span.textContent = "Black's move"
+        }
+
+
         let previous = e.target.parentNode
 
         if (e.target.hasChildNodes()) {
@@ -298,19 +304,27 @@ squares.forEach(el => {
                 newdiv[count].appendChild(newElement)
                 previous.appendChild(element)
                 count++
+                //added over here
+                squares.forEach(el => {
+                    el.id = 63 - Number(el.id)
+                })
             }
             else
                 alert("not a validate move")
         }
         else {
-            if (valid())
+            if (valid()){
                 e.target.appendChild(element)
+                squares.forEach(el => {
+                    el.id = 63 - Number(el.id)
+                })
+            }
             else
                 alert("not a valid move")
         }
-        squares.forEach(el => {
-            el.id = 63 - Number(el.id)
-        })
+        // squares.forEach(el => {
+        //     el.id = 63 - Number(el.id)
+        // })
     })
 })
 function valid() {

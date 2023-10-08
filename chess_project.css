@@ -76,10 +76,10 @@ section.chessBoard{
     width: 30px;
 }
 .black{
-    background-color:rgb(138, 237, 98);
+    background-color:rgb(78, 200, 88);
 }
 .white{
-    background-color: rgb(223, 239, 174);
+    background-color: rgb(246, 247, 243);
 }
 
 /* took from youtube need to understand start... */
